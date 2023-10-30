@@ -1,0 +1,569 @@
+/* General CSS */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none; }
+
+/* Variable */
+/* Text Colors */
+/* font-family */
+body,
+html {
+  font-size: 10px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  overflow-x: hidden; }
+
+h1 {
+  color: #000;
+  font-size: 5.5rem;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-bottom: 2rem; }
+
+h2 {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-bottom: 2rem; }
+  h2 span {
+    color: #008AFC; }
+
+h3 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4;
+  margin-bottom: 2rem; }
+
+h4 {
+  color: #000;
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  margin-bottom: 2rem; }
+
+h5 {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  margin-bottom: 0.9375rem;
+  text-transform: uppercase; }
+
+p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  color: #fff; }
+
+a,
+a:active,
+a:focus,
+a:hover,
+.btn:focus {
+  text-decoration: none;
+  box-shadow: none;
+  outline: 0; }
+
+.main-btn {
+  color: #fff;
+  background-color: #008AFC;
+  border-radius: 5rem;
+  padding: 0.9rem 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  transition: all .3s linear;
+  box-shadow: 0 0.063rem 0.4rem rgba(0, 0, 0, 0.3); }
+  .main-btn:hover {
+    background-color: #014EBC;
+    color: #fff; }
+
+.view-link {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #fff;
+  transition: all 0.3s ease-in-out; }
+  .view-link:hover {
+    color: #fff;
+    font-size: 1.6rem; }
+
+.wrapper {
+  padding: 7rem 0; }
+
+.sec-title h1 {
+  position: relative; }
+
+.sec-title h1::after {
+  position: absolute;
+  content: '';
+  background-color: #008AFC;
+  width: 50%;
+  height: 50%;
+  right: -0.4rem;
+  bottom: 0%;
+  opacity: 0.5; }
+
+/* 01 Navbar CSS */
+.header {
+  background-color: #000;
+  padding: 1rem 0;
+  /* Dropdown menu */ }
+  .header .navbar-brand img {
+    width: 20rem;
+    height: auto;
+    object-fit: cover; }
+  .header .navbar .nav-link {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    margin: 0 0.2rem; }
+  .header .dropdown-menu {
+    min-width: 13rem;
+    padding: 1.5rem 0;
+    background-color: #000;
+    border: 0.2rem solid #008AFC; }
+    .header .dropdown-menu .dropdown-item {
+      line-height: 1.3;
+      padding: 1rem;
+      font-size: 1.3rem;
+      color: #fff;
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif; }
+  .header .dropdown-toggle::after {
+    content: '+';
+    border: none;
+    vertical-align: middle;
+    font-size: 1.6rem; }
+
+.header .nav-item:hover > .dropdown-toggle::after,
+.header .nav-link.dropdown-toggle.show {
+  color: #008AFC; }
+
+.header .dropdown-item:focus,
+.header .dropdown-item:hover,
+.header .navbar-nav .nav-link {
+  color: #fff;
+  background-color: transparent; }
+
+.header .navbar-nav .li:hover > ul.dropdown-menu {
+  display: block; }
+
+.header .navbar-toggler {
+  color: #fff !important;
+  font-size: 2rem;
+  height: 2.7rem;
+  padding: 0; }
+
+.header .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none; }
+
+/* Navbar Fixed */
+.header-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; }
+
+/* 02 Banner CSS */
+.banner-wrapper {
+  margin-top: 8rem;
+  background-image: url("../images/banner/banner.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  padding-bottom: 5rem; }
+
+/* Parallax Effect CSS */
+.parallax {
+  position: relative;
+  background-position: left;
+  background-size: 48%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: inline-block;
+  align-items: center;
+  width: 100%;
+  height: 100vh; }
+
+.parallax-1 {
+  position: relative;
+  background-position: right;
+  background-size: 48%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: inline-block;
+  align-items: center;
+  width: 100%;
+  height: 100vh; }
+
+.parallax-main {
+  position: relative;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: inline-block;
+  align-items: center;
+  width: 100%;
+  height: 100vh; }
+
+.parallax.img1 {
+  background-image: url("../images/banner/Banner-1.jpg");
+  height: 100%; }
+
+.parallax.img2 {
+  background-image: url("../images/Services/web-designing.webp");
+  height: 608px; }
+
+.parallax.img3 {
+  background-image: url("../images/Services/branding.webp");
+  height: 608px; }
+
+.parallax.img4 {
+  background-image: url("../images/Services/advertising.webp");
+  height: 608px; }
+
+.parallax.img5 {
+  background-image: url("../images/Services/seo.webp");
+  height: 608px; }
+
+/* About CSS */
+.main-wrapper {
+  margin-top: 80vh;
+  background-color: #fff;
+  width: 100%; }
+
+.main-wrapper .black-card {
+  position: absolute;
+  top: 25%;
+  left: -400px;
+  width: calc(100% - 20%);
+  box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem black;
+  background-color: #000;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
+  text-align: left;
+  z-index: 1; }
+
+.main-wrapper .black-card.right {
+  right: -400px;
+  left: unset; }
+
+/* Process CSS */
+.process-wrapper {
+  background-color: #000; }
+
+.process-wrapper h1,
+.work-wrapper h1 {
+  color: #fff; }
+
+.process-wrapper .process-content {
+  padding: 4rem 6rem;
+  position: relative; }
+
+.process-wrapper .process-content::after {
+  position: absolute;
+  content: '';
+  width: 40%;
+  margin: auto;
+  bottom: 0;
+  border-bottom: 0.1rem solid #fff; }
+
+.process-wrapper .process-content span {
+  color: #008AFC;
+  font-size: 7rem;
+  font-weight: 800;
+  margin-right: 2rem; }
+
+.work-wrapper {
+  background-color: #000; }
+
+/* Testimonial CSS */
+.testimonial-wrapper h2 {
+  color: #000; }
+
+.testimonial-wrapper .card {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem black;
+  box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem #d2d2d2;
+  border-radius: 1rem;
+  margin: 2rem;
+  padding: 4rem 2rem; }
+  .testimonial-wrapper .card i {
+    color: #ffbf00;
+    font-size: 1.4rem; }
+  .testimonial-wrapper .card p {
+    color: #000; }
+  .testimonial-wrapper .card h5 {
+    color: #000;
+    font-weight: 700; }
+
+.testimonial-wrapper .carousel-indicators {
+  margin-bottom: -3rem; }
+
+.testimonial-wrapper .carousel-indicators button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #000; }
+
+/* Footer CSS */
+.footer_wrapper {
+  background-color: #000;
+  padding-bottom: 0; }
+  .footer_wrapper .footer-logo img {
+    width: 25rem;
+    height: auto;
+    object-fit: cover; }
+  .footer_wrapper h5 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 2rem; }
+    .footer_wrapper h5 a {
+      color: #fff; }
+  .footer_wrapper ul {
+    list-style: none;
+    display: flex;
+    align-items: center; }
+    .footer_wrapper ul li {
+      margin-right: 1.5rem; }
+  .footer_wrapper .copyright-section p {
+    margin: 0;
+    padding: 3rem 0;
+    text-align: center; }
+
+/* Whatsapp intgration CSS */
+.whatsapp-icon {
+  position: relative; }
+  .whatsapp-icon .whatsapp {
+    position: fixed;
+    width: 6rem;
+    z-index: 1;
+    bottom: 0;
+    right: 0.5rem; }
+    .whatsapp-icon .whatsapp img {
+      width: 5.5rem; }
+
+/*=================================
+    About Page CSS
+==================================*/
+.about .abilities-wrapper ul {
+  list-style: none;
+  padding: 0; }
+
+.about .abilities-wrapper h3 {
+  color: #000; }
+
+.about .abilities-wrapper ul li p {
+  color: #000; }
+
+/* Team CSS */
+.about .team-wrapper .card .team-img {
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 0.5rem solid #008AFC; }
+
+.about .team-wrapper .card .team-img img {
+  border-radius: 50%; }
+
+.about .team-wrapper .card .team-detail h5 {
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 0;
+  padding-top: 1.5rem; }
+
+.about .team-wrapper .card .team-detail p {
+  color: #000;
+  margin: 0; }
+
+/*=================================
+    Portfolio Page CSS
+==================================*/
+.portfolio-services .card-detail {
+  box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem black;
+  background-color: #000;
+  border-radius: 2rem;
+  padding: 3rem;
+  margin-top: -2rem; }
+
+.portfolio-services .card-detail h5 {
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif; }
+
+/*=================================
+    Contact Page CSS
+==================================*/
+.contact .get-in-touch .card {
+  background-color: #fff;
+  min-height: 36rem;
+  padding: 3rem;
+  border-radius: 2rem;
+  box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem black;
+  box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem #d2d2d2;
+  text-align: center; }
+
+.contact .card i {
+  font-size: 8rem;
+  margin-bottom: 3rem; }
+
+.contact .card h4 {
+  font-weight: 800; }
+
+.contact .card p {
+  color: #000; }
+
+.contact .card p:last-child {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; }
+
+.form-section {
+  padding: 10rem;
+  background-color: #000;
+  box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem black;
+  border-radius: 2rem;
+  margin-bottom: 5rem; }
+
+.form-section .form-control:focus {
+  box-shadow: none;
+  border-color: #CCCCCC; }
+
+.form-section .form-control {
+  height: 4.5rem;
+  border: 0.1rem solid #CCCCCC;
+  font-size: 1.5rem; }
+
+.form-section textarea {
+  border: 0.1rem solid #CCCCCC;
+  font-size: 1.5rem;
+  min-height: 20rem; }
+
+/* Media Query 1170px */
+@media (max-width: 1199.5px) {
+  /* Parallax CSS */
+  .parallax:not(.parallax-main) {
+    background-size: 50%; }
+  .main-wrapper .black-card {
+    width: 100%; }
+  /* Process CSS */
+  .process-wrapper .process-content {
+    width: 100%; }
+  /* Contact Page CSS */
+  .form-section {
+    padding: 4rem 1rem; }
+  .contact .get-in-touch .card {
+    padding: 2rem 1rem; } }
+
+/* Media Query 991px */
+@media (max-width: 991.5px) {
+  /* 01 Navbar CSS */
+  .header .navbar-collapse {
+    padding: 2rem; }
+  .header .navbar-nav .nav-link {
+    padding: 0.6rem 0.5rem;
+    padding-bottom: 2rem; }
+  /* Banner CSS */
+  .banner-wrapper {
+    margin-top: 4rem;
+    padding: 4rem 2rem;
+    min-height: 730px; }
+  /* Card CSS */
+  .main-wrapper .black-card {
+    left: -226px; }
+  .main-wrapper .black-card.right {
+    right: -226px; }
+  /* Parallax CSS */
+  .parallax-main {
+    background-size: cover; }
+  /* Contact Page CSS */
+  .contact .get-in-touch .card {
+    min-height: 350px; } }
+
+/* Media Query 767px */
+@media (max-width: 767.5px) {
+  /* General CSS */
+  body,
+  html {
+    font-size: 8px; }
+  /* Banner CSS */
+  .banner-wrapper {
+    min-height: 550px; }
+  /* Card CSS */
+  .main-wrapper .black-card {
+    left: 5%;
+    width: 90%; }
+  .main-wrapper .black-card.right {
+    right: 5%;
+    width: 90%; }
+  /* Parallax CSS */
+  .parallax:not(.parallax-main) {
+    background-size: cover; }
+  .parallax-1 .black-card {
+    background-size: cover; }
+  /* Contact Page CSS */
+  .contact .get-in-touch .card {
+    min-height: 310px; } }
+
+/* Media Query 590px */
+@media (max-width: 590px) {
+  /* General CSS */
+  body,
+  html {
+    font-size: 7px; }
+  /* Parallax CSS */
+  .parallax.img2,
+  .parallax.img3,
+  .parallax.img4,
+  .parallax.img5 {
+    height: 408px; }
+  .main-wrapper {
+    margin-top: 35vh; }
+  /* Footer CSS */
+  .link-widget a img {
+    width: 30px;
+    height: 30px; }
+  /* Contact Page CSS */
+  .contact .get-in-touch .card {
+    min-height: 254px; } }
+
+/* Media Query 380px */
+@media (max-width: 390.4px) {
+  h1 {
+    font-size: 27px; }
+  h2 {
+    font-size: 25px; } }
